@@ -7,7 +7,7 @@ type Employee {
     designation: String!
     address: Address!
     projects: [Project]
-    department: Department
+    departmentId: ID
 }
 
 type Department {
