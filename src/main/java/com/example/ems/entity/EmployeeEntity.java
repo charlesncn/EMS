@@ -2,14 +2,13 @@ package com.example.ems.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
 
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "employee_table")
-public class Employee {
+public class EmployeeEntity {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
@@ -21,6 +20,6 @@ public class Employee {
     private String designation;
     private String address;
     @OneToMany(cascade = CascadeType.ALL)
-    public List<Project> projects;
+    public List<ProjectEntity> projects;
     private String departmentId;
 }

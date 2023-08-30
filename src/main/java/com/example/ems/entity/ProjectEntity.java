@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "projects_table")
-public class Project {
+public class ProjectEntity {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
@@ -16,5 +16,5 @@ public class Project {
     private String name;
     private String description;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Employee> employees;
+    private List<EmployeeEntity> employees;
 }
